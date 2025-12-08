@@ -23,6 +23,8 @@ export const movieAPI = {
   getPopularSeries: () => api.get('/tv/popular'),
   searchMulti: (query) => api.get('/search/multi', { params: { query } }),
   getMovieDetails: (id) => api.get(`/movie/${id}`),
-  getSeriesDetails: (id) => api.get(`/tv/${id}`)
+  getSeriesDetails: (id) => api.get(`/tv/${id}`),
+  getGenres: () => api.get('/genre/movie/list'),
+  getMoviesByGenre: (genreId) => api.get('/discover/movie', { params: { with_genres: genreId } })
 };
 export default api;
