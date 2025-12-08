@@ -1,0 +1,27 @@
+
+.movie-card {
+  /* Flexbox vs Grid: ¿Cuándo usar cada uno? */
+  display: flex;
+  flex-direction: column;
+  
+  /* Transiciones para interactividad */
+  transition: transform 0.3s ease;
+}
+
+
+.movie-card:hover {
+  /* Efecto al pasar el mouse */
+  transform: translateY(-5px);
+}
+
+
+.actions button {
+  /* Estados de los botones */
+  transition: background-color 0.3s ease;
+}
+
+
+.actions button.liked {
+  /* Estilo cuando está activo */
+  background-color: #e74c3c;
+}
