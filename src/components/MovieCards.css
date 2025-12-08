@@ -1,11 +1,15 @@
-
 .movie-card {
   /* Flexbox vs Grid: ¿Cuándo usar cada uno? */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Ensure comments, reservations, and likes are at the bottom */
   
   /* Transiciones para interactividad */
   transition: transform 0.3s ease;
+  
+  /* Adding border and spacing to movie cards */
+  border: 1px solid #ccc; /* Add a light border */
+  margin: 10px; /* Add spacing between cards */
 }
 
 
@@ -24,4 +28,10 @@
 .actions button.liked {
   /* Estilo cuando está activo */
   background-color: #e74c3c;
+}
+
+.movie-card .actions {
+  margin-top: auto; /* Push actions to the bottom */
+  padding: 10px; /* Add padding for better spacing */
+  border-top: 1px solid #eee; /* Separate actions visually */
 }

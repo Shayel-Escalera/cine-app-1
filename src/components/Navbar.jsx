@@ -3,11 +3,11 @@ import React from 'react';
 const Navbar = () => {
     return (
         <nav style={styles.navbar}>
-            <div style={styles.logo}>MyApp</div>
+            <div style={styles.logo}>Tefy Movies</div>
             <ul style={styles.navLinks}>
-                <li style={styles.navItem}><a href="#home" style={styles.navLink}>Home</a></li>
-                <li style={styles.navItem}><a href="#about" style={styles.navLink}>About</a></li>
-                <li style={styles.navItem}><a href="#contact" style={styles.navLink}>Contact</a></li>
+                <li style={styles.navItem}><a href="#home" style={styles.navLink}>Inicio</a></li>
+                <li style={styles.navItem}><a href="#about" style={styles.navLink}>Acerca de</a></li>
+                <li style={styles.navItem}><a href="#contact" style={styles.navLink}>Contacto</a></li>
             </ul>
         </nav>
     );

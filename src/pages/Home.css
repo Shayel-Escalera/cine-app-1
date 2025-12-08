@@ -56,8 +56,8 @@ body {
 /* Grid for movie cards */
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure responsiveness and at least 5 cards per row */
+    gap: 20px; /* Maintain spacing between cards */
 }
 
 /* Movie card styles */
