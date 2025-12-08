@@ -25,6 +25,7 @@ export const movieAPI = {
   getMovieDetails: (id) => api.get(`/movie/${id}`),
   getSeriesDetails: (id) => api.get(`/tv/${id}`),
   getGenres: () => api.get('/genre/movie/list'),
-  getMoviesByGenre: (genreId) => api.get('/discover/movie', { params: { with_genres: genreId } })
+  getMoviesByGenre: (genreId) => api.get('/discover/movie', { params: { with_genres: genreId } }),
+  getMovieTrailer: (id) => api.get(`/movie/${id}/videos`),
 };
 export default api;

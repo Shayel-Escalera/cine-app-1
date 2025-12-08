@@ -6,12 +6,20 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [trailerKey, setTrailerKey] = useState(null);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
         const response = await movieAPI.getMovieDetails(id);
         setMovie(response.data);
+
+        // Fetch trailer
+        const trailerResponse = await movieAPI.getMovieTrailer(id);
+        const trailer = trailerResponse.data.results.find(
+          (video) => video.type === 'Trailer' && video.site === 'YouTube'
+        );
+        setTrailerKey(trailer?.key || null);
       } catch (error) {
         console.error('Error fetching movie details:', error);
       } finally {
@@ -44,6 +52,21 @@ const MovieDetails = () => {
       />
       <p className="text-lg text-gray-700 mb-4">{movie.overview}</p>
       <p className="text-sm text-gray-500">Fecha de lanzamiento: {movie.release_date}</p>
+
+      {trailerKey && (
+        <div className="trailer mt-4">
+          <h2 className="text-2xl font-bold mb-2">Trailer</h2>
+          <iframe
+            width="100%"
+            height="315"
+            src={`https://www.youtube.com/embed/${trailerKey}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 };

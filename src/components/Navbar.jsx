@@ -5,9 +5,9 @@ const Navbar = () => {
         <nav style={styles.navbar}>
             <div style={styles.logo}>Tefy Movies</div>
             <ul style={styles.navLinks}>
-                <li style={styles.navItem}><a href="#home" style={styles.navLink}>Inicio</a></li>
-                <li style={styles.navItem}><a href="#about" style={styles.navLink}>Acerca de</a></li>
-                <li style={styles.navItem}><a href="#contact" style={styles.navLink}>Contacto</a></li>
+                <li style={styles.navItem}><a href="#home" style={styles.navLink} onMouseOver={(e) => e.target.style.color = styles.navLinkHover.color} onMouseOut={(e) => e.target.style.color = styles.navLink.color}>Inicio</a></li>
+                <li style={styles.navItem}><a href="#about" style={styles.navLink} onMouseOver={(e) => e.target.style.color = styles.navLinkHover.color} onMouseOut={(e) => e.target.style.color = styles.navLink.color}>Acerca de</a></li>
+                <li style={styles.navItem}><a href="#contact" style={styles.navLink} onMouseOver={(e) => e.target.style.color = styles.navLinkHover.color} onMouseOut={(e) => e.target.style.color = styles.navLink.color}>Contacto</a></li>
             </ul>
         </nav>
     );
@@ -19,12 +19,13 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px 20px',
-        backgroundColor: '#333',
-        color: '#fff',
+        backgroundColor: '#1a202c', // Changed to a darker shade
+        color: '#e2e8f0', // Changed to a lighter shade
     },
     logo: {
         fontSize: '1.5rem',
         fontWeight: 'bold',
+        color: '#63b3ed', // Added color for the logo
     },
     navLinks: {
         listStyle: 'none',
@@ -36,9 +37,13 @@ const styles = {
         marginLeft: '20px',
     },
     navLink: {
-        color: '#fff',
+        color: '#e2e8f0', // Changed to a lighter shade
         textDecoration: 'none',
         fontSize: '1rem',
+        transition: 'color 0.3s', // Added transition for hover effect
+    },
+    navLinkHover: {
+        color: '#63b3ed', // Hover color
     },
 };
 
