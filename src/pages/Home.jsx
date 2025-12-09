@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1 className="text-center text-3xl font-bold my-4">Películas Populares</h1>
+      <h1 className="text-center text-3xl font-bold my-4">LO NUEVO EN CARTELERA</h1>
       <SearchBar onSearch={handleSearch} onGenreChange={handleGenreChange} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {movies.map((movie) => (

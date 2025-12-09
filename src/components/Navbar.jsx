@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
     return (
         <nav style={styles.navbar}>
-            <div style={styles.logo}>Tefy Movies</div>
+            <div style={styles.logo}>Shay Movies</div>
             <ul style={styles.navLinks}>
                 <li style={styles.navItem}><a href="#home" style={styles.navLink} onMouseOver={(e) => e.target.style.color = styles.navLinkHover.color} onMouseOut={(e) => e.target.style.color = styles.navLink.color}>Inicio</a></li>
                 <li style={styles.navItem}><a href="#about" style={styles.navLink} onMouseOver={(e) => e.target.style.color = styles.navLinkHover.color} onMouseOut={(e) => e.target.style.color = styles.navLink.color}>Acerca de</a></li>

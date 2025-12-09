@@ -4,7 +4,7 @@ const Movies = () => {
     return (
         <div style={{ textAlign: 'center', padding: '20px' }}>
             <h1>This is my Movie</h1>
-            <p>My name is TEFY.</p>
+            <p>My name is SHAYEL.</p>
         </div>
     );
 };
